@@ -1,23 +1,23 @@
 .accordeon{
     display: flex;  
-    gap : 1rem;
-    align-items: flex-start;
+    gap : 1rem;               /* espace entre les accordéons, sans utiliser de marges */
+    align-items: flex-start;  /* chaque accordéon s'aligne en haut et garde sa propre hauteur */
 }
 
 details{
-    --vignette: 150px;
-    --texte: 20rem;
-    width: var(--vignette);
+    --vignette: 150px;   /* variable : largeur de la vignette*/
+    --texte: 20rem;       /* variable : largeur de la zone de texte */
+    width: var(--vignette);     /* état FERMÉ : l'accordéon est aussi large que la vignette */
     overflow: hidden;
-    transition: width 0.4s ease;
+    transition: width 0.4s ease;   /* la largeur change progressivement en 0,4 s au lieu de sauter */
 }
 
 details[open]{
-    width: calc(var(--vignette) + var(--texte));
+    width: calc(var(--vignette) + var(--texte));   /*la transition s'anime d'une valeur à l'autre */
 }
 
 summary {
-    float:left;
+    float:left;  /* vignette + texte : la transition s'anime d'une valeur à l'autre */
     list-style: none;
     cursor: pointer;
 }
