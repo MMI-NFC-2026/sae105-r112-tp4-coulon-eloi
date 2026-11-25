@@ -35,3 +35,6 @@ details > div{
     flex: 0 0 20rem;
 }
 
+details[open]{
+    width: calc(var(--vignette)+20rem );
+}
