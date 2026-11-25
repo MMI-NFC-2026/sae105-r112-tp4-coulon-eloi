@@ -5,11 +5,19 @@
 }
 
 details{
-    display: flex;
+    --vignette: 150px;
+    --texte: 20rem;
+    width: var(--vignette);
+    overflow: hidden;
+    transition: width 0.4s ease;
+}
+
+details[open]{
+    width: calc(var(--vignette) + var(--texte));
 }
 
 summary {
-    flex:none ;
+    float:left;
     list-style: none;
     cursor: pointer;
 }
@@ -20,23 +28,13 @@ sumarry::-webkit-details-marker {
 
 summary img{
     display: block;
-    width: 150px;
+    width: var(--vignette);
     height: auto;
 }
 
-details{ 
-    --vignette : 150px;
-    width: var(--vignette);
-    overflow: hidden;
-    transition : width 0.4s ease;
-}
-
 details > div{
-    flex: 0 0 20rem;
-}
-
-details[open]{
-    width: calc(var(--vignette)+20rem );
+    width : var(--texte);
+    margin-left : var(--vignette);
 }
 
 details h3{
