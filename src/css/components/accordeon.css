@@ -24,3 +24,14 @@ summary img{
     height: auto;
 }
 
+details{ 
+    --vignette : 150px;
+    width: var(--vignette);
+    overflow: hidden;
+    transition : width 0.4s ease;
+}
+
+details > div{
+    flex: 0 0 20rem;
+}
+
