@@ -8,3 +8,19 @@ details{
     display: flex;
 }
 
+summary {
+    flex:none ;
+    list-style: none;
+    cursor: pointer;
+}
+
+sumarry::-webkit-details-marker {
+    display: none;
+}
+
+summary img{
+    display: block;
+    width: 150px;
+    height: auto;
+}
+
